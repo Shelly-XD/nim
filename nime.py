@@ -6,7 +6,7 @@
 """
 
 # <!-- library -->
-import os, re, time, platform, sys, shutil
+import os, re, time, platform, sys, shutil, progressbar
 
 try:import requests as r
 except:os.system("python3 -m pip install requests")
@@ -34,12 +34,12 @@ def progress():
         redirect_stdout=True,
         redirect_stderr=True,
         widgets=[
-            progressbar.Percentage(),
-            progressbar.Bar(),
+           progressbar.Percentage(),
+           progressbar.Bar(),
             ' (',
-            progressbar.AdaptiveTransferSpeed(),
+           progressbar.AdaptiveTransferSpeed(),
             ' ',
-            progressbar.ETA(),
+           progressbar.ETA(),
             ') ',
         ])
 
